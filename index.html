@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لـ بنوتي 💌</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: radial-gradient(circle at top, #2a0d1f, #0d0510);
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    padding: 20px 0;
+  }
+
+  .stars {
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(2px 2px at 20% 30%, #ff6b9d, transparent),
+      radial-gradient(2px 2px at 60% 70%, #ff6b9d, transparent),
+      radial-gradient(1px 1px at 80% 20%, #fff, transparent),
+      radial-gradient(1px 1px at 30% 80%, #fff, transparent),
+      radial-gradient(2px 2px at 90% 60%, #ff6b9d, transparent),
+      radial-gradient(1px 1px at 10% 50%, #fff, transparent);
+    opacity: 0.6;
+    animation: twinkle 4s infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @keyframes twinkle {
+    from { opacity: 0.3; }
+    to { opacity: 0.8; }
+  }
+
+  .card {
+    position: relative;
+    z-index: 2;
+    background: rgba(30, 10, 25, 0.75);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 107, 157, 0.25);
+    padding: 40px 28px;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 500px;
+    width: 92%;
+    margin: 20px auto;
+    box-shadow:
+      0 0 80px rgba(255, 60, 120, 0.2),
+      inset 0 0 40px rgba(255, 60, 120, 0.05);
+    opacity: 0;
+    animation: fade 1.5s ease forwards;
+  }
+
+  @keyframes fade {
+    to { opacity: 1; }
+  }
+
+  .heart-icon {
+    font-size: 42px;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: beat 1.4s infinite;
+    filter: drop-shadow(0 0 15px rgba(255, 60, 120, 0.8));
+  }
+
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+  }
+
+  h1 span {
+    color: #ff6b9d;
+    text-shadow: 0 0 20px rgba(255, 107, 157, 0.6);
+  }
+
+  .line {
+    color: #e8d5e0;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+  }
+
+  .line.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .glow {
+    color: #ff6b9d;
+    font-weight: 600;
+    text-shadow: 0 0 12px rgba(255, 107, 157, 0.7);
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ff6b9d, transparent);
+    margin: 25px auto;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+
+  .divider.show { opacity: 1; }
+
+  .final {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+  }
+
+  .final.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .final span {
+    color: #ff6b9d;
+    text-shadow: 0 0 20px rgba(255, 107, 157, 0.9);
+  }
+
+  .signature {
+    margin-top: 20px;
+    color: #8a6d7d;
+    font-size: 13px;
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+
+  .signature.show { opacity: 1; }
+
+  .heart {
+    position: fixed;
+    top: -50px;
+    font-size: 22px;
+    animation: fall linear forwards;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(110vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="stars"></div>
+
+  <div class="card">
+    <div class="heart-icon">❤️</div>
+
+    <h1>إلى <span>بنوتي</span> .. روح قلبي</h1>
+
+    <p class="line">مش عارف أبدأ منين ولا أقولك إيه</p>
+    <p class="line">بس كل اللي أعرفه إنك بقيتي <span class="glow">حياتي كلها</span></p>
+    <p class="line">من يوم ما عرفتك وأنا حاسس إن ربنا بعتلي حاجة غالية أوي</p>
+    <p class="line">بحس معاكي بأمان.. كأني في حضن مفيهوش أي خوف</p>
+    <p class="line">بثق فيكي لدرجة إني بسلمك قلبي وأنا مغمض</p>
+    <p class="line">إنتي مش بس <span class="glow">عثل وكيوت</span>.. إنتي كل حاجة حلوة</p>
+    <p class="line">بحب ضحكتك.. وبحب صوتك.. وبحب حتى سكوتك</p>
+    <p class="line">ولو الدنيا كلها خيرتني.. هختارك إنتي كل مرة</p>
+
+    <div class="divider"></div>
+
+    <p class="final">
+      بحبك يا <span>بنوتي</span> 🤍<br>
+      بحبك حب مفيش بعده حب..<br>
+      وهفضل أحبك لحد آخر نفس فيا
+    </p>
+
+    <p class="signature">— اللي قلبه بقى بتاعك 💕</p>
+  </div>
+
+<script>
+  window.addEventListener('load', function () {
+    const lines = document.querySelectorAll('.line');
+    const divider = document.querySelector('.divider');
+    const finalMsg = document.querySelector('.final');
+    const signature = document.querySelector('.signature');
+
+    let delay = 400;
+    lines.forEach(line => {
+      setTimeout(() => {
+        line.classList.add('show');
+        // اسكرول تلقائي مع كل سطر جديد
+        line.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, delay);
+      delay += 500;
+    });
+
+    setTimeout(() => divider.classList.add('show'), delay);
+    delay += 400;
+
+    setTimeout(() => {
+      finalMsg.classList.add('show');
+      finalMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, delay);
+    delay += 700;
+
+    setTimeout(() => signature.classList.add('show'), delay);
+
+    function createHeart() {
+      const hearts = ['❤️', '💕', '💖', '💗', '💘', '🌸'];
+      const h = document.createElement('div');
+      h.classList.add('heart');
+      h.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.fontSize = (Math.random() * 15 + 15) + 'px';
+      h.style.animationDuration = (Math.random() * 3 + 4) + 's';
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 7000);
+    }
+
+    setInterval(createHeart, 800);
+  });
+</script>
+
+</body>
+</html>
